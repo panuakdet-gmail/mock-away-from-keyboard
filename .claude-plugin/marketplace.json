@@ -1,0 +1,24 @@
+{
+  "name": "away-from-keyboard-skills",
+  "id": "away-from-keyboard-skills",
+  "owner": {
+    "name": "Panuakdet Suwannatat"
+  },
+  "metadata": {
+    "description": "Claude Code skills that write the prompt for a fresh session to work alone while you are away, overnight or on a written plan",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "away-from-keyboard",
+      "source": "./",
+      "description": "Write one prompt file that lets a fresh Claude Code session work for hours without you: it hands work to helper agents, watches your usage limits, wakes itself after a limit resets, and leaves a summary for when you come back",
+      "version": "1.0.0",
+      "author": {
+        "name": "Panuakdet Suwannatat"
+      },
+      "keywords": ["overnight", "afk", "autonomous", "subagents", "usage-limits", "prompts", "workflow"],
+      "category": "workflow"
+    }
+  ]
+}

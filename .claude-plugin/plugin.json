@@ -1,0 +1,14 @@
+{
+  "name": "away-from-keyboard",
+  "description": "Write one prompt file that lets a fresh Claude Code session work for hours without you: it hands work to helper agents, watches your usage limits, wakes itself after a limit resets, and leaves a summary for when you come back.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Panuakdet Suwannatat"
+  },
+  "license": "MIT",
+  "keywords": ["overnight", "afk", "autonomous", "subagents", "usage-limits", "prompts", "workflow"],
+  "skills": [
+    "./skills/mock-work-all-night",
+    "./skills/mock-prompt-new-session-to-work-on-the-plan"
+  ]
+}
