@@ -41,6 +41,8 @@ FIXED. Carry out the plan in TRACKER. I am AFK (FILL: for how long, or until whe
 
 FIXED. You are the orchestrator. Your own context is expensive (you run on Fable, which has its own limit), so stay lean: plan, delegate, check results, keep the tracker. Let subagents read the large files, write the code, run the tests and take the screenshots.
 
+FIXED. Talk to me in chat the way `/mock-speak-well concise` says: invoke that skill before your first chat message, and write every chat message that way. It covers chat only, not the files you write.
+
 ## The plan, and your freedom with it
 
 FIXED. `TRACKER/spec.md` states the problems and my decisions; those are fixed. `brief.md` holds the facts. `issues/` is one suggested split into packages, written before any code; it is a starting point, not an order. Reorder, merge, split or add packages when you learn something the plan did not know, and write why in `decided-alone.md`. What must not change: the problems, the decisions, the ground rules, and "done means" for each issue.

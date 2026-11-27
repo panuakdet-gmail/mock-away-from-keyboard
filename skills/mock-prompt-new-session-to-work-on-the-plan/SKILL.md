@@ -8,6 +8,8 @@ disable-model-invocation: true
 
 The deliverable is one prompt file in the current repo plus the one line the owner pastes. You write the prompt; you do not do the work, and you do not rewrite the plan.
 
+Talk to the owner in chat the way `/mock-speak-well concise` says: invoke that skill before your first chat message, and write every chat message that way. It covers chat only, not the files you write.
+
 The plan already exists: a tracker folder (`-tracker/NAME/` in this repo's convention) with a spec, a brief of facts, and issues. The prompt points at it and adds only what the tracker cannot hold: the mandate, the AFK rules, the usage-limit machinery, the usage and time bookkeeping, the subagent mix, and the wrap-up. It must leave the new session free to reorder, merge, split or add packages when it learns something the plan did not know; the spec's problems and the owner's decisions are fixed, the path is not.
 
 Arguments, all optional, in plain words: the tracker folder, the version or branch name, a deadline or wake time, `budget=N`, `fable=low|medium|high` (default medium). Anything missing is decided from the repo, the conversation and memory, never asked. Ask only if no plan can be found at all.

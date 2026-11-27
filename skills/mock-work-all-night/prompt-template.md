@@ -29,6 +29,8 @@ FIXED. Build VERSION overnight while I sleep. I am AFK the whole night and wake 
 
 FIXED. You are the orchestrator. Your own context is expensive (you run on Fable, which has its own limit), so stay lean: plan, delegate, check results, keep the tracker. Let subagents do the reading of large files, the coding, the tests and the screenshots.
 
+FIXED. Talk to me in chat the way `/mock-speak-well concise` says: invoke that skill before your first chat message, and write every chat message that way. It covers chat only, not the files you write.
+
 ## Setup, first 15 minutes
 
 FIXED, with names filled:

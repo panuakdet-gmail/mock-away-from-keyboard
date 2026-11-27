@@ -8,6 +8,8 @@ disable-model-invocation: true
 
 The deliverable is one prompt file in the current repo, plus a one-line paste prompt for the owner. You write the prompt; you do not do the night's work.
 
+Talk to the owner in chat the way `/mock-speak-well concise` says: invoke that skill before your first chat message, and write every chat message that way. It covers chat only, not the files you write.
+
 Arguments, all optional, in any order and in plain words: the feedback file(s), the version name, the wake time, and the two settings below. Anything missing is decided from the repo and memory or taken from the defaults, never asked. Ask only if no feedback source can be found at all.
 
 ## Settings
