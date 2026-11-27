@@ -52,9 +52,20 @@ FIXED, names filled:
 1. Run `date`. Real clock times for every stamp; never guess the time.
 2. Arm the resume job before anything else: a CronCreate job every 30 minutes with the text "continue the VERSION plan: run date, check usage, read TRACKER/status.md, resume dead agents, pick up the next open item". A rate-limited session never wakes by itself; this job is what wakes it. Delete it at the wrap-up.
 3. Check usage with the command below. Write the start row into the usage log in `status.md`: clock time, weekly, Fable-only, 5-hour, reset times. This row is the baseline the final report is measured against.
-4. Read `CLAUDE.md`, the README, the memory notes about earlier runs, and the whole tracker.
-5. Branch BRANCH from BASE (state whether it already exists). Commit nothing on any branch.
-6. Keep `status.md` as the single source of truth: the usage log, one row per package with model, agent id, state, last update, next step.
+4. **Preflight, while I am still at the computer.** Run one harmless command of every kind the run needs, so every approval prompt appears now (FILL from the project: the keychain read in the usage command, one test file per test suite, any server or program the run starts, one screenshot, a `git commit --dry-run`, a `git push --dry-run` if the run pushes, the deploy tool in a harmless form, one Agent call per model, a CronCreate). Then tell me in one short list which ones asked for approval. End that message with this banner in a code block, and in the same turn run `say "Preflight done. You can go now."` and `osascript -e 'display notification "You can go now" with title "PROJECT VERSION" sound name "Glass"'`:
+
+```
+ __   __ ___  _   _     ____    _    _   _     ____   ___      _   _  ___ __        __
+ \ \ / // _ \| | | |   / ___|  / \  | \ | |   / ___| / _ \    | \ | |/ _ \\ \      / /
+  \ V /| | | | | | |  | |     / _ \ |  \| |  | |  _ | | | |   |  \| | | | |\ \ /\ / /
+   | | | |_| | |_| |  | |___ / ___ \| |\  |  | |_| || |_| |   | |\  | |_| | \ V  V /
+   |_|  \___/ \___/    \____/_/   \_\_| \_|   \____| \___/    |_| \_|\___/   \_/\_/
+```
+
+   If something still needs me, show no banner: say what I must do, first and in bold. Do not wait for my answer after the banner; go on.
+5. Read `CLAUDE.md`, the README, the memory notes about earlier runs, and the whole tracker.
+6. Branch BRANCH from BASE (state whether it already exists). Commit nothing on any branch.
+7. Keep `status.md` as the single source of truth: the usage log, one row per package with model, agent id, state, last update, next step.
 
 ## Usage and time bookkeeping
 
