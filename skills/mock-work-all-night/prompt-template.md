@@ -38,7 +38,8 @@ FIXED, with names filled:
 1. Run `date`. Use real clock times for every stamp all night; never guess the time.
 2. Arm the resume job before anything else: a CronCreate job every 30 minutes with the text "continue the VERSION overnight plan: run date, check usage, read TRACKER/status.md, resume dead agents, pick up the next open item". A rate-limited session never wakes by itself; this job is what wakes it.
 3. Check usage with the command below (paste the usage command). Write the numbers and reset times into `status.md`.
-4. **Preflight, while I am still at the computer.** Run one harmless command of every kind the night needs, so every approval prompt appears now (FILL from the project: the keychain read in the usage command, one test file per test suite, any server or program the run starts, one screenshot, a `git commit --dry-run`, a `git push --dry-run` if the run pushes, the deploy tool in a harmless form, one Agent call per model, a CronCreate). Then tell me in one short list which ones asked for approval. End that message with this banner in a code block, and in the same turn run `say "Preflight done. You can go now."` and `osascript -e 'display notification "You can go now" with title "PROJECT VERSION" sound name "Glass"'`:
+4. **Preflight, while I am still at the computer.** Run one harmless command of every kind the night needs, so every approval prompt appears now (FILL from the project: the keychain read in the usage command, one test file per test suite, any server or program the run starts, one screenshot, a `git commit --dry-run`, a `git push --dry-run` if the run pushes, the deploy tool in a harmless form, one Agent call per model, a CronCreate).
+5. **Tell me I can go, before any other work.** Send me one chat message with a short list of which commands asked for approval. End that message with this banner in a code block, and in the same turn run `say "Preflight done. You can go now."` and `osascript -e 'display notification "You can go now" with title "PROJECT VERSION" sound name "Glass"'`:
 
 ```
  __   __ ___  _   _     ____    _    _   _     ____   ___      _   _  ___ __        __
@@ -48,10 +49,10 @@ FIXED, with names filled:
    |_|  \___/ \___/    \____/_/   \_\_| \_|   \____| \___/    |_| \_|\___/   \_/\_/
 ```
 
-   If something still needs me, show no banner: say what I must do, first and in bold. Do not wait for my answer after the banner; go on.
-5. Read `CLAUDE.md`, the README, the memory notes about earlier overnight runs, and in full FEEDBACK_FILES. Say which lines count as requests and name any screenshots to look at.
-6. Branch: `git checkout -b BRANCH` from BASE_BRANCH (or stay on the open branch for a pass). Commit nothing on any branch.
-7. Tracker at TRACKER with `spec.md`, `status.md`, `decided-alone.md`, `issues/NN-slug.md`. Every request becomes an issue before code is written. Name the screenshot folder, test file prefix and tool prefix for this version.
+   If something still needs me, show no banner: say what I must do, first and in bold. Do not start the next step until `say` has run. Do not wait for my answer after the banner; go on.
+6. Read `CLAUDE.md`, the README, the memory notes about earlier overnight runs, and in full FEEDBACK_FILES. Say which lines count as requests and name any screenshots to look at.
+7. Branch: `git checkout -b BRANCH` from BASE_BRANCH (or stay on the open branch for a pass). Commit nothing on any branch.
+8. Tracker at TRACKER with `spec.md`, `status.md`, `decided-alone.md`, `issues/NN-slug.md`. Every request becomes an issue before code is written. Name the screenshot folder, test file prefix and tool prefix for this version.
 
 ## Usage limits: this decides when you stop
 
